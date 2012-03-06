@@ -6,13 +6,13 @@ updated. In effect it moves mass assignment protection to the controller.
 
 Add the gem to your Gemfile:
 
-```
+``` ruby
 gem "trusted_attributes"
 ```
 
 Include it in your application controller:
 
-```
+``` ruby
 class ApplicationController < ActionController::Base
   include TrustedAttributes
 end
