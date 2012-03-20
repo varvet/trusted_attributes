@@ -37,6 +37,7 @@ private
   end
 
   def attributes
+    return {} unless params[attributes_key]
     # Be helpful and raise an exception when non trusted attributes are sent
     unless Rails.env.production?
       diff = params[attributes_key].keys.map(&:to_sym) - accessible_attributes
